@@ -1,0 +1,18 @@
+<p>
+  Filtro works!
+</p>
+<div>
+	<form>
+		Idade minima: <input id="idadeMinima" type="number" [value]="idadeMinima" (input)="idadeMinima = $event.target.value"/>
+		<br/>
+		Idade maxima: <input id="idadeMaxima" type="number" [value]="idadeMaxima" (input)="idadeMaxima = $event.target.value"/>
+		<br/>
+		Vacina: <input id=vacina type="text" [value]="vacina" (input)="vacina = $event.target.value"/>
+		<br/>
+		Regiao: <input id=regiao type="text" [value]="regiao" (input)="regiao = $event.target.value"/>
+		<br/>
+		Sexo: <input id=sexo type="text" [value]="sexo" (input)="sexo = $event.target.value"/>
+		<br/>
+		<button (click)="BotaoClicado()">Ver resultado</button>
+	</form>
+</div>
