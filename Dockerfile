@@ -6,7 +6,7 @@ WORKDIR /prebuild
 RUN apk --update add curl ca-certificates nodejs nodejs-npm && \
     npm install @angular/cli -g && \
     npm install . && \
-    ng build --prod --output-path=/srv/
+    ng build --output-path=/srv/
 
 WORKDIR /srv
 ENTRYPOINT ["/usr/bin/caddy"]
