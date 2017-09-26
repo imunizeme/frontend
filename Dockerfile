@@ -1,4 +1,4 @@
-FROM abiosoft/caddy:0.10.7
+FROM giantswarm/caddy
 
 COPY ./ /prebuild
 WORKDIR /prebuild
