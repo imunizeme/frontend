@@ -28,8 +28,8 @@
   <table class="table">
     <thead class="thead-inverse">
       <tr>
-        <th style="width: 168px;">Vacinas Tomadas</th>
         <th>Nome da Vacina</th>
+        <th style="width: 168px;">Vacinas Tomadas</th>
         <th>Data de nascimento</th>
         <th>Sexo</th>
         <th>Data Tomada</th>
@@ -37,8 +37,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let obj of objectList">
-        <th scope="row">{{ obj.vacinas_tomadas }}</th>
         <td>{{ obj.nome_vacina }}</td>
+        <th scope="row">{{ obj.vacinas_tomadas }}</th>
         <td>{{ obj.birth_date | date: 'dd/MM/yyyy' }}</td>
         <td *ngIf="obj.sexo == 'M'">Masculino</td>
         <td *ngIf="obj.sexo == 'F'">Feminino</td>
