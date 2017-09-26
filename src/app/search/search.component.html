@@ -2,53 +2,47 @@
 
   <div class="filter">
     <h3 class="filter-header">Filtros: </h3>
-    <select class="custom-select">
-      <option selected>Selecione o Sexo</option>
-      <option value="m">Masculino</option>
-      <option value="f">Feminino</option>
+
+    <select class="custom-select" [(ngModel)]="params.sexo">
+      <option [value]="''" selected>Selecione o Sexo</option>
+      <option [value]="'M'">Masculino</option>
+      <option [value]="'F'">Feminino</option>
     </select>
 
-    <select class="custom-select">
-      <option selected>Selecione o Ano</option>
-      <option *ngFor="let year of listYears" value="m">{{ year }}</option>
+    <select class="custom-select" [(ngModel)]="params.birth">
+      <option [value]="''" selected>Selecione Ano de Nascimento</option>
+      <option *ngFor="let year of listYears" [value]="'01-01-' + year">{{ year }}</option>
     </select>
 
-    <div class="input-datepicker input-group">
+    <!-- <div class="input-datepicker input-group">
       <input class="form-control" placeholder="Data da vacinação"
-              name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        name="dp" [(ngModel)]="params.tomada" ngbDatepicker #d="ngbDatepicker">
       <button class="input-group-addon" (click)="d.toggle()" type="button">
         <i class="fa fa-calendar" aria-hidden="true"></i>
       </button>
-    </div>
+    </div> -->
+
+    <button type="button" class="btn btn-light" (click)="search()">Filtrar</button>
   </div>
 
   <table class="table">
     <thead class="thead-inverse">
       <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th style="width: 168px;">Vacinas Tomadas</th>
+        <th>Nome da Vacina</th>
+        <th>Data de nascimento</th>
+        <th>Sexo</th>
+        <th>Data Tomada</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let obj of objectList">
+        <th scope="row">{{ obj.vacinas_tomadas }}</th>
+        <td>{{ obj.nome_vacina }}</td>
+        <td>{{ obj.birth_date | date: 'dd/MM/yyyy' }}</td>
+        <td *ngIf="obj.sexo == 'M'">Masculino</td>
+        <td *ngIf="obj.sexo == 'F'">Feminino</td>
+        <td>{{ obj.data_tomada | date: 'dd/MM/yyyy' }}</td>
       </tr>
     </tbody>
   </table>

@@ -30,8 +30,12 @@
 		.input-datepicker {
 			width: 230px;
 			display: inline-flex;
-			position: fixed;
+			position: static;
 			margin-left: 5px;
+		}
+
+		.btn {
+			cursor: pointer;
 		}
 	}
 }
