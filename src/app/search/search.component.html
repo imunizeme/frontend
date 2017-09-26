@@ -1,0 +1,55 @@
+<div class="box-search">
+
+  <div class="filter">
+    <h3 class="filter-header">Filtros: </h3>
+    <select class="custom-select">
+      <option selected>Selecione o Sexo</option>
+      <option value="m">Masculino</option>
+      <option value="f">Feminino</option>
+    </select>
+
+    <select class="custom-select">
+      <option selected>Selecione o Ano</option>
+      <option *ngFor="let year of listYears" value="m">{{ year }}</option>
+    </select>
+
+    <div class="input-datepicker input-group">
+      <input class="form-control" placeholder="Data da vacinação"
+              name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+      <button class="input-group-addon" (click)="d.toggle()" type="button">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,21 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppRouter } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { FiltroComponent } from './filtro/filtro.component'
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-	FiltroComponent
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-	FormsModule,
-	HttpModule
+    FormsModule,
+    NgbModule.forRoot(),
+    AppRouter
   ],
   providers: [],
   bootstrap: [AppComponent]

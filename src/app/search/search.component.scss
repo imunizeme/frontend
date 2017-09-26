@@ -1,0 +1,37 @@
+.box-search {
+	background: #fff;
+
+	table {
+		text-align: start;
+
+		.thead-inverse {
+			th {
+				background: #e48217;
+				border-top: none; 
+			}
+		}
+	
+		tbody {
+			color: #000;
+		}
+	}
+
+	.filter {
+		text-align: start;
+		padding: 20px 0 10px;
+
+		.filter-header {
+			color: #000;
+			float: left;
+			font-size: 22px;
+			margin: 5px 10px 0 0;
+		}
+
+		.input-datepicker {
+			width: 230px;
+			display: inline-flex;
+			position: fixed;
+			margin-left: 5px;
+		}
+	}
+}
