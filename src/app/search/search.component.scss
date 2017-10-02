@@ -39,3 +39,15 @@
 		}
 	}
 }
+
+@media (min-width: 855px) {
+	.box-search{
+		-webkit-margin-before: 300px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 854px) {
+	.box-search{
+		margin-top: 500px;
+	}
+}

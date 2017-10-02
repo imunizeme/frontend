@@ -14,21 +14,30 @@ header.masthead {
     padding: 150px 15px 100px;
     text-align: center;
     .header-content-inner {
-      h1 {
-        font-size: 30px;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
       hr {
         margin: 30px auto;
       }
+      h1 {
+        font-size: 50px;
+        color: #ff6a00;
+      }
       p {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 50px;
-        color: fade-out(white, .3);
+        font-size: 18px;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        color: #000;
+      }
+
+      a {
+        border: 2px solid #fff;
+        background: #fff;
+        img {
+          max-width: 170px;
+        }
+      }
+      a:hover {
+        border: 2px solid #ff6a00;
       }
     }
   }
@@ -56,16 +65,6 @@ header.masthead {
           margin-right: auto;
           margin-left: auto;
           color: #000;
-        }
-        a {
-          border: 2px solid #fff;
-          background: #fff;
-          img {
-            max-width: 170px;
-          }
-        }
-        a:hover {
-          border: 2px solid #ff6a00;
         }
       }
     }
